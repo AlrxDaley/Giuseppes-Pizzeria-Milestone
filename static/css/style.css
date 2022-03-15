@@ -1,8 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
 
+body{
+    background-image:url('https://res.cloudinary.com/dkpchnxiu/image/upload/v1647356604/GiuseppesImages/background_image_dgivc7.jpg') ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Title css */
 .title-background{
     width: 100%;
     margin: auto;
+    margin-top: 2vh;
 }
 
 .container{
@@ -22,6 +32,22 @@
 }
 
 .title{
-    font-size: 8vw;
+    margin-top: 1vh;
+    font-size: 6vw;
     font-family: 'IM Fell DW Pica', serif;
+}
+
+/* Navbar css */
+
+.navbar a{
+    color: black;
+    font-size: 25px;
+}
+
+.navbar{
+    width: 100%;
+}
+
+.bg-opacity{
+    background: rgba(255, 255, 255, 0.5);
 }
