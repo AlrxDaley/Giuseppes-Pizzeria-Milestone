@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'tableapp',
     'phone_field',
+    'phonenumber_field',
     
 ]
 
@@ -141,3 +142,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+PHONENUMBER_DB_FORMAT = 'E164'
+PHONENUMBER_DEFAULT_REGION = 'GB'
