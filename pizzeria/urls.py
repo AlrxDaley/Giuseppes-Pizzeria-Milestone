@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from tableapp.views import index
+from tableapp.views import index, table_booking, update_booking
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index , name='index')
+    path('', index , name='index'),
+    path('table_booking/', table_booking, name='table_booking'),
+    path('update_booking/', update_booking, name='update_booking')
 ]

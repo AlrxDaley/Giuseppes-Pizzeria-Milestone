@@ -68,8 +68,13 @@ footer{
     padding-top: 5px;
 }
 
+/* menu banner css */
 .banner{
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
+}
+
+.remove_ext{
+    display: none;
 }
