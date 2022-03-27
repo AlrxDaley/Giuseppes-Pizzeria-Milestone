@@ -3,7 +3,7 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="container">
+<div class="container bg-opacity form_bg">
   <form action="" method="POST">
     {% csrf_token %}
     <div class="row">
@@ -32,7 +32,7 @@
         {{form.special_request|as_crispy_field}}
       </div>
     </div>
-    <input type="submit" name="submit">
+    <input type="submit" name="submit" class="btn-primary">
   </form>
 </div>
   <a href="{% url 'update_booking' %}">update</a>

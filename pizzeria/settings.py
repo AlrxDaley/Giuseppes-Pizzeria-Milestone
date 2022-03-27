@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'tableapp',
     'phone_field',
     'phonenumber_field',
+    'static',
     
 ]
 

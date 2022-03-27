@@ -65,7 +65,7 @@ img{
 /* footer css */
 
 footer{
-    padding-top: 5px;
+    padding-top: 5vh;
 }
 
 /* menu banner css */
@@ -77,4 +77,13 @@ footer{
 
 #id_phone_number_1{
     display: none;
+}
+
+.form_bg{
+    margin-top: 10px;
+}
+
+.booking_options{
+    margin-top: 23.5vh;
+    margin-bottom: 23.5vh;
 }

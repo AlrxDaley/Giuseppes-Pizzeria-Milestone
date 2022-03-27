@@ -7,6 +7,8 @@ from .forms import booking_form
 def index(request):
     return render(request, 'about_us.html')
 
+def booking_options(request):
+    return render(request, 'booking_options.html')
 
 def table_booking(request):
     
