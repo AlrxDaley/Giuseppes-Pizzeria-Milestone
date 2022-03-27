@@ -1,4 +1,5 @@
 from multiprocessing import context
+from unicodedata import name
 from django.shortcuts import redirect, render , HttpResponse
 from .models import booking
 from .forms import booking_form
@@ -26,7 +27,8 @@ def table_booking(request):
 
 def update_booking(request):
     
-    form = booking_form()
+    bookings = booking.objects.get(last_name="Bloggs")
+    form = booking_form(instance=bookings)
         
     context = {'form':form}
     return render(request, 'booking_form.html', context)
