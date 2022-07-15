@@ -8,31 +8,26 @@
     {% csrf_token %}
     <div class="row">
       <div class="col-6">
-        {{form.first_name|as_crispy_field}}
-      </div>
-      <div class="col-6">
-        {{form.last_name|as_crispy_field}}
+        {{form.first_name | as_crispy_field}}
       </div>
     </div>
-    <div class="row">
-      <div class="col-6">
-        {{form.booking_date|as_crispy_field}}
-      </div>
-      <div class="col-6">
-        {{form.booking_time|as_crispy_field}}
-      </div>
+    <div class="col-6">
+      {{form.last_name|as_crispy_field}}
+  
     </div>
     <div class="row">
-      <div class="col-4">
-        {{form.number_of_guests|as_crispy_field}}
-      </div>
       <div class="col-8">
-        {{form.phone_number | as_crispy_field}}
+        {{form.email|as_crispy_field}}
       </div>
     </div>
     <div class="row">
       <div class="col">
-        {{form.special_request|as_crispy_field}}
+        {{form.subject|as_crispy_field}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        {{form.message|as_crispy_field}}
       </div>
     </div>
     <input type="submit" name="submit" class="btn-primary btn-block">

@@ -12,12 +12,12 @@
 <body>
     <div class="container-fluid bg-opacity">
         <div class="row">
-            <nav class="navbar nav-pills sticky-top navbar-light nav-justified">
-                <a href="{% url 'index'%}" class="nav-item nav-link active red"><i class="fas fa-home"> Home</i></a>
+            <ul class="navbar nav-pills sticky-top navbar-light nav-justified">
+                <a href="{% url 'index'%}" class="nav-item nav-link red "><i class="fas fa-home"> Home</i></a>
                 <a href="{% url 'booking_options' %}" class="nav-item nav-link red"><i class="fas fa-calendar"> Booking</i></a>
-                <a href="{% url 'booking_options' %}" class="nav-item nav-link red"><i class="fas fa-address-book"> Contact</i></a>
+                <a href="{% url 'contact' %}" class="nav-item nav-link red"><i class="fas fa-address-book"> Contact</i></a>
                 <a href="#" class="nav-item nav-link red"><i class="fas fa-newspaper"> Menu</i></a>
-            </nav>
+            </ul>
         </div>
     </div>
     <div class="container">
