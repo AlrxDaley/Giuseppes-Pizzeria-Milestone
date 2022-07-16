@@ -58,6 +58,10 @@ body{
     background: rgba(255, 255, 255, 0.5);
 }
 
+.bg-opacity-contact{
+    background: rgba(255, 255, 255, 1);
+}
+
 img{
     width: 100%;
 }
@@ -73,10 +77,6 @@ footer{
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
-}
-
-#id_phone_number_1{
-    display: none;
 }
 
 .form_bg{
