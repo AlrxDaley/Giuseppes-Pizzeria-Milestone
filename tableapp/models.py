@@ -1,8 +1,8 @@
 
-from pyexpat import model
 from django.db import models
 from phone_field import PhoneField
 from django.utils import timezone
+from tempus_dominus.widgets import DatePicker, TimePicker, DateTimePicker
 
 
 
@@ -10,12 +10,12 @@ from django.utils import timezone
 
 class booking(models.Model):
     order_id= models.CharField(max_length=120, blank= True)
-    booking_date = models.DateField(default=timezone.now)
-    booking_time = models.TimeField(default=timezone.now)
+    booking_date = models.DateTimeField(default=timezone.now)
+    booking_time = models.DateTimeField(default=timezone.now)
     number_of_guests = models.IntegerField(default=0)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    phone_number = models.CharField(max_length=9)
+    phone_number = models.CharField(max_length=10)
     special_request = models.TextField(blank=True)
     
     class Meta:

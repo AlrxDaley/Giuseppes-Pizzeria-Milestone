@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% load crispy_forms_tags %}
+{{ form.media }}
 
 {% block content %}
 <div class="container bg-opacity form_bg">
@@ -38,4 +39,6 @@
     <input type="submit" name="submit" class="btn-primary btn-block">
   </form>
 </div>
+
+
 {% endblock %}

@@ -1,8 +1,7 @@
-from multiprocessing import context
-from unicodedata import name
+from django.core.mail import send_mail, BadHeaderError
 from django.shortcuts import redirect, render , HttpResponse
 from .models import booking
-from .forms import booking_form, contact_form
+from .forms import booking_form, ContactForm
 
 # Create your views here.
 def index(request):
@@ -33,10 +32,7 @@ def update_booking(request):
     context = {'form':form}
     return render(request, 'booking_form.html', context)
 
-from django.shortcuts import render, redirect
-from .forms import ContactForm
-from django.core.mail import send_mail, BadHeaderError
-from django.http import HttpResponse
+
 
 def contact(request):
 	if request.method == 'POST':

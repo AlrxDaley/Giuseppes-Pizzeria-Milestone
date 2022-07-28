@@ -3,11 +3,21 @@ from django.forms import ModelForm
 from django import forms
 from .models import booking, contact
 
+class DateInput(forms.DateInput):
+    input_type = 'date'
+
+class TimeInput(forms.DateTimeInput):
+    input_type = 'time'
+
 class booking_form(ModelForm):
     
     class Meta:
         model = booking
         fields = '__all__'
+        widgets = {
+            'booking_date': DateInput(),
+            'booking_time': TimeInput(),
+        }
         
 class contact_form(ModelForm):
     

@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'phone_field',
     'phonenumber_field',
     'static',
+    'tempus_dominus',
     
 ]
 
@@ -145,8 +146,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
-EMAIL_BACKEND = 'django_ses.SESBackend'
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-AWS_SES_REGION_NAME = 'eu-west-2'
-AWS_SES_REGION_ENDPOINT = 'email-smtp.eu-west-2.amazonaws.com'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
