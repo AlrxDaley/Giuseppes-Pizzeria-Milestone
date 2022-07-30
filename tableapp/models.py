@@ -10,9 +10,9 @@ from tempus_dominus.widgets import DatePicker, TimePicker, DateTimePicker
 
 class booking(models.Model):
     order_id= models.CharField(max_length=120, blank= True)
-    booking_date = models.DateTimeField(default=timezone.now)
-    booking_time = models.DateTimeField(default=timezone.now)
-    number_of_guests = models.IntegerField(default=0)
+    booking_date = models.DateTimeField(default=timezone.now, max_length=255)
+    booking_time = models.DateTimeField(default=timezone.now, max_length=255)
+    number_of_guests = models.IntegerField()
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     phone_number = models.CharField(max_length=10)
