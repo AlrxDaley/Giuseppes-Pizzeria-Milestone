@@ -1,9 +1,6 @@
 
 from django.db import models
-from phone_field import PhoneField
 from django.utils import timezone
-from tempus_dominus.widgets import DatePicker, TimePicker, DateTimePicker
-
 
 
 # Create your models here.
@@ -15,8 +12,8 @@ class booking(models.Model):
     number_of_guests = models.IntegerField()
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    phone_number = models.CharField(max_length=10)
-    special_request = models.TextField(blank=True)
+    phone_number = models.CharField(max_length=1024)
+    special_request = models.TextField(blank=True, max_length=1024)
     
     class Meta:
         ordering = ['-booking_date']
