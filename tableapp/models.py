@@ -7,8 +7,6 @@ from django.utils import timezone
 
 class booking(models.Model):
     order_id= models.CharField(max_length=120, blank= True)
-    booking_date = models.DateTimeField(default=timezone.now, max_length=255)
-    booking_time = models.DateTimeField(default=timezone.now, max_length=255)
     number_of_guests = models.IntegerField()
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
@@ -16,7 +14,7 @@ class booking(models.Model):
     special_request = models.TextField(blank=True, max_length=1024)
     
     class Meta:
-        ordering = ['-booking_date']
+        ordering = ['-order_id']
         
     def __str__(self):
         return self.first_name
