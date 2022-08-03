@@ -16,7 +16,7 @@ class booking_form(ModelForm):
         fields = '__all__'
         widgets = {
             'booking_date': DateInput(),
-            'booking_time': TimeInput(),
+            'booking_Tod': TimeInput(),
         }
         
 class contact_form(ModelForm):
